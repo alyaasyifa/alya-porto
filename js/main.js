@@ -20,7 +20,7 @@ const MOON = "🌙";
 const SUN = "☀️";
 const DARK_MODE = "dark";
 const LIGHT_MODE = "light";
-const DEFAULT_MODE = DARK_MODE;
+const DEFAULT_MODE = LIGHT_MODE; // Set the default mode to LIGHT_MODE
 
 const btn = document.querySelector("#theme-switcher");
 
@@ -37,10 +37,10 @@ function init() {
 
 function setMode(mode = DEFAULT_MODE) {
   if (mode === DARK_MODE) {
-    btn.textContent = SUN;
+    btn.textContent = MOON; // Change to MOON when in DARK_MODE
     document.body.classList.add(DARK_MODE);
   } else if (mode === LIGHT_MODE) {
-    btn.textContent = MOON;
+    btn.textContent = SUN; // Change to SUN when in LIGHT_MODE
     document.body.classList.remove(DARK_MODE);
   }
 }
@@ -89,9 +89,9 @@ function showSlide(n) {
   dot[slideIndex - 1].className += " active";
 }
 
-function scrollToTop() {
-  window.scrollTo(0, 0);
-}
+// function scrollToTop() {
+//   window.scrollTo(0, 0);
+// }
 
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
