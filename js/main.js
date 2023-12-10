@@ -89,9 +89,9 @@ function showSlide(n) {
   dot[slideIndex - 1].className += " active";
 }
 
-// function scrollToTop() {
-//   window.scrollTo(0, 0);
-// }
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
 
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
