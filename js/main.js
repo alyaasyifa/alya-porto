@@ -126,6 +126,6 @@ function sendEmail() {
           + "<br> Email: " + document.getElementById("email").value
           + "<br> Message: " + document.getElementById("message").value
 }).then(
-  message => alert("Message sent successfully!")
+  message => alert("Message send successfully!")
 );
 }
