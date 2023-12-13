@@ -36,11 +36,6 @@
         transform: rotate(45deg) translate(-5px, -7px);
     }
 
-    /* .scrollTop img {
-        width: 40px; 
-        height: 40px; 
-    } */
-
     .logo a{
         text-align: center;
         font-size: 25px;
@@ -76,6 +71,10 @@
 
     .nav-active{
         transform: translateX(0);
+    }
+
+    nav ul li a:hover{
+        color: #000;
     }
 
     :root{
@@ -191,3 +190,29 @@
         height: 100vh;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 20px; 
+    }
+
+    .pre-contact {
+        text-align: center;
+    }
+
+    .pre-contact img {
+        height: auto;
+        width: 80%;
+        max-width: 180px;
+        margin-top: 10px;
+    }
+    
+    .contactForm {
+        width: 100%; 
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+}
+
+  

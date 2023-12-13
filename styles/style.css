@@ -35,6 +35,10 @@ body{
     color: var(--primaryBg);
 }
 
+.mod{
+    padding: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6,
 strong {
     color: var(--primaryText);
@@ -60,7 +64,7 @@ a{
 }
 
 .btn {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     background-color: var(--border);
     border-radius: 1.5px solid var(--border);
     border-radius: var(--borderRadius);
@@ -144,6 +148,24 @@ nav button {
     background: transparent;
     font-size: 18px;
     color: var(--primaryText);
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--primaryIcon);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 .nav {
@@ -338,10 +360,6 @@ nav ul li a{
     background-color: #ce0000;
 }
 
-/* #portfolios{
-    padding: var(--sectionPadding);
-} */
-
 .portfolios .pre-title{
     margin: 0 auto;
 }
@@ -406,10 +424,6 @@ nav ul li a{
     display: flex;
     gap: 1rem;
     margin: 1rem 0;
-    /* outline: auto;
-    margin: 8px auto;
-    padding: 20px;
-    border-radius: 20px */
 }
 
 .project-tags div{
@@ -472,22 +486,102 @@ nav ul li a{
     width: 60px;
 }
 
-.skills-list{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1.5rem;
-}
-
 .skills-right ul{
     line-height: 2rem;
     padding: 0 1rem;
 }
 
-/* AREA CONTACT */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 95px;
+}
+
+.pre-contact {
+    flex: 1;
+    max-width: 400px;
+}
+
+.pre-contact img {
+    height: 320px;
+    width: 320px;
+    margin-top: 10px;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: white;
+    margin-top: 20%; 
+    border-radius: 15px;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: var(--primaryIcon);
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: var(--primaryIcon);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
 
 footer{
-    padding: 4rem 0;
+    padding: 20px;
     text-align: center;
+    background-color:  rgb(34, 17, 98);
+}
+
+footer p{
+    color: #9c98cd;
 }
 
 .footer-icons{
@@ -499,36 +593,12 @@ footer{
 }
 
 .footer-icons svg{
-    fill: #3e3f40;
+    fill: #9c98cd;  
 }
 
 .footer-icons a:hover svg{
     fill: #000;
 }
-
-/* .scrollTop{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 10px 15px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
-    border-radius: 1px solid #fff;
-    cursor: pointer;
-    transition: all 0.5s ease 0s;
-} */
-
-/* .scrollTop img {
-    width: 60px; 
-    height: 60px; 
-} */
-/* 
-.scrollTop:hover{
-    background-color: #f7f7f7;
-    color: #000;
-} */
-
 
 #progress {
     position: fixed;

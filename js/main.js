@@ -16,8 +16,8 @@ window.onbeforeunload = () => {
   }
 };
 
-const MOON = "🌙";
-const SUN = "☀️";
+const MOON = "";
+const SUN = "";
 const DARK_MODE = "dark";
 const LIGHT_MODE = "light";
 const DEFAULT_MODE = LIGHT_MODE; // Set the default mode to LIGHT_MODE
@@ -89,9 +89,6 @@ function showSlide(n) {
   dot[slideIndex - 1].className += " active";
 }
 
-// function scrollToTop() {
-//   window.scrollTo(0, 0);
-// }
 
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
@@ -114,3 +111,21 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+
+function sendEmail() {
+  Email.send({
+    SecureToken: "2670d936-4e75-4025-ad48-819c19bd67b5",
+    Host : "smtp.elasticemail.com",
+    Username : "alyashifa850@gmail.com",
+    Password : "AAF81743306E2685599259029863E68DAA12",
+    To : 'alyashifa850@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "Name: " + document.getElementById("name").value
+          + "<br> Email: " + document.getElementById("email").value
+          + "<br> Message: " + document.getElementById("message").value
+}).then(
+  message => alert("Message sent succesfuly")
+);
+}
